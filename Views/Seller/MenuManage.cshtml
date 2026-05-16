@@ -1,0 +1,39 @@
+﻿@{
+    ViewData["Title"] = "Menu - Cloud Kitchen (Seller)";
+    Layout = "~/Views/Shared/_SellerLayout.cshtml"; 
+}
+<main class="main-content">
+    <div class="profile-box"><img src="images/profile.png" alt="user"><div class="meta"><div class="name">Amna Ramzan</div><div class="role">Seller • Amna's Kitchen</div></div><div style="margin-left:auto"><span class="pill">Menu Editor</span></div></div>
+
+    <div class="card">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px">
+            <input id="searchInput" class="input" placeholder="Search items or category..." style="min-width:260px">
+            <select id="categoryFilter" class="select"><option value="All">All categories</option><option>Entrees</option><option>Starters</option><option>Desserts</option><option>Drinks</option></select>
+            <button id="btnAdd" class="btn btn-add" style="margin-left:auto">+ Add Item</button>
+        </div>
+
+        <table class="menu-table" aria-describedby="menu-list">
+            <thead>
+                <tr><th>Item</th><th>Category</th><th>Price (Rs.)</th><th>Available</th><th>Actions</th></tr>
+            </thead>
+            <tbody id="menuBody"></tbody>
+        </table>
+    </div>
+</main>
+
+<!-- Modal: Add/Edit Item -->
+<div id="modalBackdrop" class="modal-backdrop" role="dialog" aria-modal="true">
+    <div class="modal" role="document">
+        <h3 id="modalTitle">Add Menu Item</h3>
+        <div style="margin-top:10px">
+            <div class="form-row"><div class="col"><label>Name</label><input id="itemName" class="input" /></div><div class="col"><label>Category</label><input id="itemCategory" class="input" placeholder="e.g. Entrees" /></div></div>
+            <div class="form-row"><div class="col"><label>Price (Rs.)</label><input id="itemPrice" class="input" type="number" /></div><div class="col"><label>Available</label><select id="itemAvail" class="select"><option value="true">Yes</option><option value="false">No</option></select></div></div>
+            <div class="form-row"><div class="col"><label>Image</label><input id="itemImage" type="file" accept="image/*" /></div><div class="col" style="display:flex;align-items:center;justify-content:flex-end"><img id="imgPreview" class="img-preview" src="images/placeholder.png" alt="preview" /></div></div>
+            <div style="margin-top:12px;text-align:right"><button id="saveItem" class="btn btn-add">Save</button> <button id="cancelItem" class="btn btn-del" style="background:#aaa">Cancel</button></div>
+        </div>
+    </div>
+</div>
+    
+
+   
+

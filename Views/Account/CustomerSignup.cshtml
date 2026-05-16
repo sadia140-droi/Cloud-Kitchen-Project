@@ -1,0 +1,30 @@
+﻿@{
+    ViewData["Title"] = "Customer Sign Up";
+    Layout = "~/Views/Shared/_SellCustLayout.cshtml";
+}
+
+<div class="signup-container">
+    <h2>Create Customer Account</h2>
+    <form id="customerSignupForm">
+        <input type="text" id="fullName" placeholder="Full Name" required />
+        <input type="email" id="email" placeholder="Email Address" required />
+        <input type="tel" id="phone" placeholder="Phone Number" required />
+        <input type="password" id="password" placeholder="Create Password" required />
+        <input type="password" id="confirmPassword" placeholder="Confirm Password" required />
+        <select id="city" required>
+            <option value="" disabled selected>Select City</option>
+            <option value="lahore">Lahore</option>
+            <option value="karachi">Karachi</option>
+            <option value="islamabad">Islamabad</option>
+            <option value="faisalabad">Faisalabad</option>
+        </select>
+        <button type="submit">Sign Up</button>
+    </form>
+
+    <div class="link-section">
+        <p>
+            Already have an account?
+            <a asp-action="Login" asp-controller="Account">Login here</a>
+        </p>
+    </div>
+</div>

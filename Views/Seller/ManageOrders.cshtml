@@ -1,0 +1,70 @@
+﻿@model Cloud_Kitchen_web_App.Models.OrdersViewModel
+@{
+    ViewBag.Title = "Orders";
+    Layout = "~/Views/Shared/_SellerLayout.cshtml";
+}
+<main class="main-content">
+    <div class="profile-box" role="region" aria-label="Profile">
+        <img src="images/profile.png" alt="Amna">
+        <div class="meta">
+            <div class="name">Amna Ramzan</div>
+            <div class="role">Seller • Amna's Kitchen</div>
+        </div>
+        <div style="margin-left:auto"><span style="display:inline-block;padding:6px 10px;border-radius:999px;background:linear-gradient(90deg,var(--soft-orange),#ffbf72);color:var(--dark-brown);font-weight:700">Open</span></div>
+    </div>
+
+    <!-- controls -->
+    <div class="controls">
+        <input id="searchInput" class="input" placeholder="Search customer or item..." style="min-width:260px">
+        <select id="statusFilter" class="select">
+            <option value="All">All statuses</option>
+            <option>New</option>
+            <option>Preparing</option>
+            <option>Out for Delivery</option>
+            <option>Delivered</option>
+            <option>Cancelled</option>
+        </select>
+        <div style="margin-left:auto" class="small-meta" id="lastSync">Last sync: -</div>
+    </div>
+
+    <div class="stat-row">
+        <div class="stat"><strong id="totalCount">0</strong><span>Total orders</span></div>
+        <div class="stat"><strong id="newCount">0</strong><span>New</span></div>
+        <div class="stat"><strong id="pendingCount">0</strong><span>Preparing / Out</span></div>
+    </div>
+
+    <section class="orders-card">
+        <h2 style="margin-bottom:12px;color:var(--dark-brown)">Orders</h2>
+        <div class="table-wrap">
+            <table aria-describedby="orders-table">
+                <thead>
+                    <tr>
+                        <th>Order #</th>
+                        <th>Customer</th>
+                        <th>Items</th>
+                        <th>Total (Rs.)</th>
+                        <th>Placed</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="ordersBody"></tbody>
+            </table>
+        </div>
+    </section>
+</main>
+
+<!-- Modal -->
+<div id="modalBackdrop" class="modal-backdrop" role="dialog" aria-modal="true">
+    <div class="modal" role="document">
+        <div style="display:flex;justify-content:space-between;align-items:center">
+            <h4 id="modalTitle" style="color:var(--dark-brown);margin:0">Order Details</h4>
+            <button id="closeModal" class="action-btn" style="background:#eee;color:#333;border-radius:8px;padding:6px 10px">✕</button>
+        </div>
+        <div id="modalBody" style="margin-top:12px"></div>
+        <div style="margin-top:14px;text-align:right">
+            <button id="modalCancel" class="action-btn btn-cancel">Cancel Order</button>
+            <button id="modalNext" class="action-btn btn-next">Next Status</button>
+        </div>
+    </div>
+</div>

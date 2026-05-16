@@ -1,0 +1,30 @@
+﻿@{
+    Layout = "~/Views/Shared/_AuthLayout.cshtml";
+}
+
+<div class="login-container">
+    <h2>Login to Cloud Kitchen</h2>
+
+    <form asp-controller="Account" asp-action="Login" method="post">
+        @Html.AntiForgeryToken()
+
+        <input type="email" name="Email" placeholder="Email" required />
+        <input type="password" name="Password" placeholder="Password" required />
+
+        <button type="submit">Login</button>
+    </form>
+
+    <a asp-controller="Account" asp-action="Forgot" class="forgot-link">
+        Forgot Password?
+    </a>
+
+    <a asp-controller="Account" asp-action="Signup" class="signup-link">
+        Don't have an account? Sign Up
+    </a>
+
+    <a asp-controller="Home" asp-action="Index"
+       class="signup-link"
+       style="color:var(--soft-orange);">
+        ← Back to Home
+    </a>
+</div>

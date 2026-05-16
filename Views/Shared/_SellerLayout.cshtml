@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link rel="stylesheet" href="~/css/SellerDashboard.css" />
+    <link rel="stylesheet" href="~/css/sellermenu.css" />
+    <link rel="stylesheet" href="~/css/manageorders.css" />
+    <link rel="stylesheet" href="~/css/notification.css" />
+    <link rel="stylesheet" href="~/css/sellerprofile.css" />
+    <link rel="stylesheet" href="~/css/setting.css" />
+
+</head>
+<body>
+    <header class="top-bar">
+        <div class="left">
+            <img src="~/images/logo.png" alt="Cloud Kitchen">
+            <h1>Cloud Kitchen</h1>
+        </div>
+        <div class="right">
+            <a href="/Home/Index">Home</a>
+            <a href="/Seller/Notification">🔔</a>
+        </div>
+    </header>
+
+@*     <div class="dashboard-wrapper"> *@
+        <aside class="sidebar">
+            <h2>Dashboard</h2>
+            <nav class="menu">
+                <a href="/Seller/SellerDashboard">Overview</a>
+                <a href="/Seller/MenuManage">Menu</a>
+                <a href="/Seller/ManageOrders">Orders</a>
+                <a href="/Seller/Notification">Notification</a>
+                <a href="/Seller/SellerProfile">Profile</a>
+                <a href="/Seller/Setting">Setting</a>
+            </nav>
+            <div class="logout"><a href="/Account/Login">Logout</a></div>
+        </aside>
+
+            @RenderBody()
+    @* </div> *@
+
+    <script src="~/js/Sellerdashboard.js" asp-append-version="true"></script>
+    <script src="~/js/sellermenu.js" asp-append-version="true"></script>
+    <script src="~/js/manageorders.js" asp-append-version="true"></script>
+    <script src="~/js/notification.js" asp-append-version="true"></script>
+    <script src="~/js/sellerprofile.js" asp-append-version="true"></script>
+    <script src="~/js/setting.js" asp-append-version="true"></script>
+</body>
+</html>

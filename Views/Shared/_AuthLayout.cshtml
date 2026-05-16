@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+
+    <link rel="stylesheet" href="~/css/Login.css" />
+    <link rel="stylesheet" href="~/css/signup.css" />
+    <link rel="stylesheet" href="~/css/forgot.css" />
+
+    <style>
+        body {
+            background: url('@Url.Content("~/images/back.PNG")') no-repeat center center / cover;
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+            body::before {
+                content: "";
+                position: absolute;
+                inset: 0;
+                backdrop-filter: blur(10px);
+                background: rgba(0, 0, 0, 0.4);
+                z-index: 1;
+            }
+
+        .auth-content {
+            position: relative;
+            z-index: 2; /* content above the overlay */
+        }
+    </style>
+</head>
+<body>
+    <div class="auth-content">
+        @RenderBody()
+    </div>
+</body>
+</html>

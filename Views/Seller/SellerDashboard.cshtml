@@ -1,0 +1,99 @@
+﻿@model Cloud_Kitchen_web_App.Models.SellerDashboardViewModel
+@{
+    ViewBag.Title = "Overview - Cloud Kitchen (Seller)";
+    Layout = "~/Views/Shared/_SellerLayout.cshtml";
+}
+    <main class="main-content">
+        <div class="profile-box" role="region" aria-label="Profile">
+            <img src="images/profile.png" alt="Amna">
+            <div class="meta">
+                <div class="name">Amna Ramzan</div>
+                <div class="role">Seller • Amna's Kitchen</div>
+            </div>
+            <div style="margin-left:auto"><span style="display:inline-block;padding:6px 10px;border-radius:999px;background:linear-gradient(90deg,var(--soft-orange),#ffbf72);color:var(--dark-brown);font-weight:700">Open</span></div>
+        </div>
+
+        <!-- Overview stats -->
+        <section class="overview-grid" aria-label="Key stats">
+            <div class="card">
+                <h3>Total Orders</h3>
+                <div class="stat" id="statTotal">0</div>
+                <div class="muted">All time orders</div>
+            </div>
+            <div class="card">
+                <h3>Orders This Week</h3>
+                <div class="stat" id="statWeek">0</div>
+                <div class="muted">New • Delivered • Cancelled</div>
+            </div>
+            <div class="card">
+                <h3>Preparing / Out</h3>
+                <div class="stat" id="statPending">0</div>
+                <div class="muted">Currently active</div>
+            </div>
+            <div class="card">
+                <h3>Today Earnings</h3>
+                <div class="stat" id="statEarnings">Rs. 0</div>
+                <div class="muted">Estimated</div>
+            </div>
+        </section>
+
+        <!-- Two columns: recent orders + quick actions -->
+        <section class="layout-two-cols">
+            <div class="recent-card">
+                <h3 style="margin-bottom:12px;color:var(--dark-brown)">Recent Orders</h3>
+
+                <div style="display:flex;gap:10px;align-items:center;margin-bottom:12px">
+                    <input id="searchRecent" class="input" placeholder="Search recent orders..." style="padding:8px 10px;border-radius:8px;border:1px solid #e3d6bf;background:var(--white);min-width:220px">
+                    <select id="filterRecent" class="select" style="padding:8px 10px;border-radius:8px;border:1px solid #e3d6bf;background:var(--white)">
+                        <option value="All">All statuses</option>
+                        <option>New</option>
+                        <option>Preparing</option>
+                        <option>Out for Delivery</option>
+                        <option>Delivered</option>
+                        <option>Cancelled</option>
+                    </select>
+                    <div style="margin-left:auto;color:var(--muted)" id="overviewLastSync">Last sync: -</div>
+                </div>
+
+                <div class="table-wrap">
+                    <table aria-describedby="recent-orders">
+                        <thead>
+                            <tr><th>Order #</th><th>Customer</th><th>Items</th><th>Amount</th><th>Placed</th><th>Status</th><th>Actions</th></tr>
+                        </thead>
+                        <tbody id="recentBody"></tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>Quick Actions</h3>
+                <div style="display:flex;flex-direction:column;gap:10px;margin-top:12px">
+                    <a href="orders.html" style="text-decoration:none"><button style="padding:10px;border-radius:8px;border:none;background:var(--soft-orange);color:var(--dark-brown);font-weight:700;cursor:pointer">View All Orders</button></a>
+                    <a href="menu.html" style="text-decoration:none"><button style="padding:10px;border-radius:8px;border:1px solid #f0c784;background:#fff;color:var(--dark-brown);font-weight:700;cursor:pointer">Edit Menu</button></a>
+                    <a href="settings.html" style="text-decoration:none"><button style="padding:10px;border-radius:8px;border:none;background:#dcdcdc;color:var(--dark-brown);font-weight:700;cursor:pointer">Store Settings</button></a>
+
+                    <div style="margin-top:8px;color:var(--muted);font-size:0.95rem">
+                        <strong>Payment:</strong> JazzCash • EasyPaisa<br>
+                        <strong>Next payout:</strong> <span id="nextPayout">18 Nov, 2025</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal (same viewer used on orders page) -->
+    <div id="modalBackdrop" class="modal-backdrop" role="dialog" aria-modal="true">
+        <div class="modal" role="document">
+            <div style="display:flex;justify-content:space-between;align-items:center">
+                <h4 id="modalTitle" style="color:var(--dark-brown);margin:0">Order Details</h4>
+                <button id="closeModal" class="action-btn" style="background:#eee;color:#333;border-radius:8px;padding:6px 10px">✕</button>
+            </div>
+            <div id="modalBody" style="margin-top:12px"></div>
+            <div style="margin-top:14px;text-align:right">
+                <button id="modalCancel" class="action-btn btn-cancel">Cancel Order</button>
+                <button id="modalNext" class="action-btn btn-next">Next Status</button>
+            </div>
+        </div>
+    </div>
+
+   

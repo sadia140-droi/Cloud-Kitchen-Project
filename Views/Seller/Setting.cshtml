@@ -1,0 +1,73 @@
+﻿@{
+    ViewData["Title"] = "Setting - Cloud Kitchen (Seller)";
+    Layout = "~/Views/Shared/_SellerLayout.cshtml";
+}
+<main class="main-content">
+    <div class="profile-box"><img src="images/profile.png" alt="Amna"><div class="meta"><div class="name">Amna Ramzan</div><div class="small">Seller • Amna's Kitchen</div></div></div>
+
+    <!-- Store settings -->
+    <div class="card">
+        <div class="section-title">Store Status</div>
+        <div style="display:flex;align-items:center;gap:12px">
+            <label class="toggle"><input id="storeOpen" type="checkbox" /><span class="small">Open for orders</span></label>
+            <div style="margin-left:auto" class="small" id="storeStatusText">Closed</div>
+        </div>
+    </div>
+
+    <!-- Business hours -->
+    <div class="card">
+        <div class="section-title">Business Hours</div>
+        <div class="row">
+            <div class="col"><label>Open Time</label><input id="openTime" type="time" value="10:00" /></div>
+            <div class="col"><label>Close Time</label><input id="closeTime" type="time" value="22:00" /></div>
+        </div>
+        <div class="small">Tip: set your daily hours. You can extend this later for per-day scheduling.</div>
+    </div>
+
+    <!-- Payments -->
+    <div class="card">
+        <div class="section-title">Payment Methods</div>
+        <div style="display:flex;gap:12px;flex-wrap:wrap">
+            <label class="toggle"><input id="payJazz" type="checkbox" /> JazzCash</label>
+            <label class="toggle"><input id="payEasy" type="checkbox" /> EasyPaisa</label>
+            <label class="toggle"><input id="payCOD" type="checkbox" /> Cash on Delivery</label>
+        </div>
+        <div style="margin-top:10px" class="small">Enable only the payment methods you accept.</div>
+    </div>
+
+    <!-- Notifications preferences -->
+    <div class="card">
+        <div class="section-title">Notifications</div>
+        <div style="display:flex;flex-direction:column;gap:10px">
+            <label class="toggle"><input id="notifNewOrder" type="checkbox" /> New order notifications</label>
+            <label class="toggle"><input id="notifPayments" type="checkbox" /> Payment notifications</label>
+            <label class="toggle"><input id="notifMessages" type="checkbox" /> Messages from customers</label>
+        </div>
+    </div>
+
+    <!-- Change password -->
+    <div class="card">
+        <div class="section-title">Change Password</div>
+        <div style="max-width:420px">
+            <label>Current password</label>
+            <input id="curPass" type="password" />
+            <label>New password</label>
+            <input id="newPass" type="password" />
+            <label>Confirm new password</label>
+            <input id="confirmPass" type="password" />
+            <div class="actions"><button id="btnChangePass" class="btn btn-save">Change Password</button></div>
+            <div class="small" id="passMsg"></div>
+        </div>
+    </div>
+
+    <!-- Save / Danger actions -->
+    <div class="card">
+        <div style="display:flex;align-items:center;gap:12px">
+            <button id="btnSaveAll" class="btn btn-save">Save Settings</button>
+            <button id="btnReset" class="btn btn-cancel">Reset to Defaults</button>
+            <div style="margin-left:auto"><button id="btnDelete" class="btn danger">Delete Account</button></div>
+        </div>
+    </div>
+
+</main>
+

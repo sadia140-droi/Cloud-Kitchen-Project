@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Cloud Kitchen</title>
+
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/Home.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+
+<body>
+
+    <!-- HEADER (SAME DESIGN) -->
+    <header class="navbar">
+        <div style="display:flex;align-items:center;gap:10px">
+            <div class="logo">
+                <img src="~/images/logo.png" alt="Logo">
+            </div>
+            <div class="brand-title">Cloud Kitchen</div>
+        </div>
+
+        <nav class="nav-links">
+            <a asp-controller="Home" asp-action="Index">Home</a>
+            <a asp-controller="Account" asp-action="Signup">Sign Up</a>
+            <a asp-controller="Account" asp-action="Login">Login</a>
+        </nav>
+
+        <div class="icons">
+            <div class="search-input" id="searchBox">
+                <input id="searchInput" placeholder="Search dishes or category..." />
+            </div>
+
+            <i class="fas fa-search" id="searchToggle"></i>
+
+            <i class="fas fa-shopping-cart" id="cartBtn">
+                <span class="cart-badge" id="cartCount">0</span>
+            </i>
+        </div>
+    </header>
+
+    <!-- PAGE BODY -->
+    <main>
+        @RenderBody()
+    </main>
+
+    <!-- FOOTER (SAME DESIGN) -->
+    <footer>
+        <p>© 2025 Cloud Kitchen | Cozy Homemade Comfort</p>
+        <div class="social">
+            <i class="fab fa-facebook"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-whatsapp"></i>
+        </div>
+    </footer>
+
+    <!-- JS -->
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/js/Home.js" asp-append-version="true"></script>
+
+    
+
+</body>
+</html>

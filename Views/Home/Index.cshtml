@@ -1,0 +1,122 @@
+﻿@{
+    ViewData["Title"] = "Home";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<header class="hero">
+    <div class="hero-left">
+        <div class="eyebrow">Homemade & Fresh</div>
+        <h1>Traditional <span style="color:var(--orange)">Desi Food</span> at Your Doorstep</h1>
+        <p class="lead">Freshly made with love — bringing the warmth of home-cooked meals to your table.</p>
+        <div class="cta-row">
+            <button class="btn btn-primary" id="orderNowBtn">Order Now</button>
+            <button class="btn btn-outline" id="seeMenuBtn">See Menu</button>
+        </div>
+    </div>
+    <div class="hero-right">
+        <div class="slider-wrap" id="sliderWrap">
+            <div class="slides" id="slides">
+                <div class="slide"><img src="images/Daal.jpg" alt="Daal"></div>
+                <div class="slide"><img src="images/kheer.jpg" alt="Kheer"></div>
+                <div class="slide"><img src="images/briyani.jpg" alt="Briyani"></div>
+            </div>
+            <div class="pager" id="pager"></div>
+            <div class="left-control" id="prevBtn" aria-label="Previous"><i class="fas fa-chevron-left"></i></div>
+            <div class="right-control" id="nextBtn" aria-label="Next"><i class="fas fa-chevron-right"></i></div>
+        </div>
+    </div>
+</header>
+
+<!-- DEALS -->
+<section class="deals-section">
+    <div class="deals-head">
+        <h2>Today's Deals</h2>
+        <button class="btn btn-outline" id="viewAllBtn" aria-expanded="false">View All</button>
+    </div>
+
+    <div class="deals-grid" id="dealsGrid">
+        <div class="deal-card" data-title="Spicy Curry" data-price="420" data-img="images/deal 1.jpg">
+            <img src="images/deal 1.jpg" alt="Spicy Curry">
+            <div class="card-body">
+                <div><h3 class="title">Spicy Curry</h3><div>Full of flavor — served with naan.</div></div>
+                <div class="price-row"><span>Rs. 420</span><button class="btn btn-primary add-btn">Add</button></div>
+            </div>
+        </div>
+        <div class="deal-card" data-title="Penne Pasta" data-price="350" data-img="images/deal 2.jpg">
+            <img src="images/deal 2.jpg" alt="Penne Pasta">
+            <div class="card-body">
+                <div><h3 class="title">Penne Pasta</h3><div>Comfort food with rich tomato sauce.</div></div>
+                <div class="price-row"><span>Rs. 350</span><button class="btn btn-primary add-btn">Add</button></div>
+            </div>
+        </div>
+        <div class="deal-card" data-title="Power Bowl" data-price="300" data-img="images/pasta.jpg">
+            <img src="images/pasta.jpg" alt="Power Bowl">
+            <div class="card-body">
+                <div><h3 class="title">Power Bowl</h3><div>Healthy grains, veg & protein.</div></div>
+                <div class="price-row"><span>Rs. 300</span><button class="btn btn-primary add-btn">Add</button></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Expanded area (hidden until View All clicked) -->
+    <div class="deals-expanded" id="dealsExpanded" aria-hidden="true">
+        <div class="expanded-grid" id="expandedGrid">
+            <!-- cloned deal cards will populate here -->
+        </div>
+    </div>
+</section>
+
+<!-- CATEGORIES -->
+<section class="categories">
+    <h2>Browse by Category</h2>
+    <div class="cat-grid">
+        <div class="cat" data-cat="Breakfast"><img src="images/nashta.jpg" alt="Breakfast"><p>Breakfast</p></div>
+        <div class="cat" data-cat="Lunch"><img src="images/lunch.jpg" alt="Lunch"><p>Lunch</p></div>
+        <div class="cat" data-cat="Snacks"><img src="images/fast food.jpg" alt="Snacks"><p>Snacks</p></div>
+        <div class="cat" data-cat="Desserts"><img src="images/kheer (2).jpg" alt="Desserts"><p>Desserts</p></div>
+    </div>
+</section>
+
+<!-- WHY -->
+<section class="why-us">
+    <h2>Why Choose Cloud Kitchen?</h2>
+    <div class="why-grid">
+        <div class="why-card"><i class="fas fa-heart"></i><p>Homemade with Love</p></div>
+        <div class="why-card"><i class="fas fa-broom"></i><p>Clean & Hygienic Kitchen</p></div>
+        <div class="why-card"><i class="fas fa-truck"></i><p>Fast & Fresh Delivery</p></div>
+        <div class="why-card"><i class="fas fa-leaf"></i><p>Healthy Ingredients</p></div>
+    </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="reviews">
+    <h2>What Our Customers Say</h2>
+    <div class="review-grid">
+        <div class="review"><p>"Best homemade food in town! Reminds me of mom's cooking."</p><strong>- Ayesha</strong></div>
+        <div class="review"><p>"Delivery always on time, and food tastes fresh every time."</p><strong>- Ahmed</strong></div>
+        <div class="review"><p>"Love the packaging and quality. Highly recommended!"</p><strong>- Fatima</strong></div>
+    </div>
+</section>
+<!-- CART MODAL -->
+<div class="overlay" id="overlay">
+    <div class="cart-modal">
+        <div class="cart-header">
+            <h3>Your Cart</h3>
+            <div>
+                <button class="btn btn-outline" id="clearCartBtn">Clear</button>
+                <button class="btn" id="closeCart">Close</button>
+            </div>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <div class="empty" id="cartEmpty">Your cart is empty. Add something tasty!</div>
+        </div>
+        <div class="cart-footer">
+            <div style="font-weight:700">Total: Rs. <span id="cartTotal">0</span></div>
+            <div>
+                <button class="btn btn-outline" id="checkoutBtn">Checkout</button>
+                <button class="btn btn-primary" id="continueBtn">Continue</button>
+            </div>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,33 @@
+D:\New folder\projects\Cloud_Kitchen web App\Cloud_Kitchen web App\obj\Debug\net8.0\rpswa.dswa.cache.json
+D:\New folder\projects\Cloud_Kitchen web App\Cloud_Kitchen web App\obj\Debug\net8.0\Cloud_Kitchen web App.GeneratedMSBuildEditorConfig.editorconfig
+D:\New folder\projects\Cloud_Kitchen web App\Cloud_Kitchen web App\obj\Debug\net8.0\Cloud_Kitchen web App.AssemblyInfoInputs.cache
+D:\New folder\projects\Cloud_Kitchen web App\Cloud_Kitchen web App\obj\Debug\net8.0\Cloud_Kitchen web App.AssemblyInfo.cs
+D:\New folder\projects\Cloud_Kitchen web App\Cloud_Kitchen web App\obj\Debug\net8.0\Cloud_Kitchen web App.csproj.CoreCompileInputs.cache
+D:\New folder\projects\Cloud_Kitchen web App\Cloud_Kitchen web App\obj\Debug\net8.0\Cloud_Kitchen web App.MvcApplicationPartsAssemblyInfo.cache
+D:\New folder\projects\Cloud_Kitchen web App\Cloud_Kitchen web App\obj\Debug\net8.0\Cloud_Kitchen web App.RazorAssemblyInfo.cache
+D:\New folder\projects\Cloud_Kitchen web App\Cloud_Kitchen web App\obj\Debug\net8.0\Cloud_Kitchen web App.RazorAssemblyInfo.cs
+D:\New folder\projects\Cloud_Kitchen web App\Cloud_Kitchen web App\bin\Debug\net8.0\appsettings.Development.json
+D:\New folder\projects\Cloud_Kitchen web App\Cloud_Kitchen web App\bin\Debug\net8.0\appsettings.json
+D:\New folder\projects\Cloud_Kitchen web App\Cloud_Kitchen web App\bin\Debug\net8.0\Cloud_Kitchen web App.staticwebassets.runtime.json
+D:\New folder\projects\Cloud_Kitchen web App\Cloud_Kitchen web App\bin\Debug\net8.0\Cloud_Kitchen web App.staticwebassets.endpoints.json
+D:\New folder\projects\Cloud_Kitchen web App\Cloud_Kitchen web App\bin\Debug\net8.0\Cloud_Kitchen web App.exe
+D:\New folder\projects\Cloud_Kitchen web App\Cloud_Kitchen web App\bin\Debug\net8.0\Cloud_Kitchen web App.deps.json
+D:\New folder\projects\Cloud_Kitchen web App\Cloud_Kitchen web App\bin\Debug\net8.0\Cloud_Kitchen web App.runtimeconfig.json
+D:\New folder\projects\Cloud_Kitchen web App\Cloud_Kitchen web App\bin\Debug\net8.0\Cloud_Kitchen web App.dll
+D:\New folder\projects\Cloud_Kitchen web App\Cloud_Kitchen web App\bin\Debug\net8.0\Cloud_Kitchen web App.pdb
+D:\New folder\projects\Cloud_Kitchen web App\Cloud_Kitchen web App\obj\Debug\net8.0\rjimswa.dswa.cache.json
+D:\New folder\projects\Cloud_Kitchen web App\Cloud_Kitchen web App\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
+D:\New folder\projects\Cloud_Kitchen web App\Cloud_Kitchen web App\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json
+D:\New folder\projects\Cloud_Kitchen web App\Cloud_Kitchen web App\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+D:\New folder\projects\Cloud_Kitchen web App\Cloud_Kitchen web App\obj\Debug\net8.0\scopedcss\bundle\Cloud_Kitchen web App.styles.css
+D:\New folder\projects\Cloud_Kitchen web App\Cloud_Kitchen web App\obj\Debug\net8.0\scopedcss\projectbundle\Cloud_Kitchen web App.bundle.scp.css
+D:\New folder\projects\Cloud_Kitchen web App\Cloud_Kitchen web App\obj\Debug\net8.0\staticwebassets.build.json
+D:\New folder\projects\Cloud_Kitchen web App\Cloud_Kitchen web App\obj\Debug\net8.0\staticwebassets.build.json.cache
+D:\New folder\projects\Cloud_Kitchen web App\Cloud_Kitchen web App\obj\Debug\net8.0\staticwebassets.development.json
+D:\New folder\projects\Cloud_Kitchen web App\Cloud_Kitchen web App\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+D:\New folder\projects\Cloud_Kitchen web App\Cloud_Kitchen web App\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+D:\New folder\projects\Cloud_Kitchen web App\Cloud_Kitchen web App\obj\Debug\net8.0\Cloud_Kitchen web App.dll
+D:\New folder\projects\Cloud_Kitchen web App\Cloud_Kitchen web App\obj\Debug\net8.0\refint\Cloud_Kitchen web App.dll
+D:\New folder\projects\Cloud_Kitchen web App\Cloud_Kitchen web App\obj\Debug\net8.0\Cloud_Kitchen web App.pdb
+D:\New folder\projects\Cloud_Kitchen web App\Cloud_Kitchen web App\obj\Debug\net8.0\Cloud_Kitchen web App.genruntimeconfig.cache
+D:\New folder\projects\Cloud_Kitchen web App\Cloud_Kitchen web App\obj\Debug\net8.0\ref\Cloud_Kitchen web App.dll

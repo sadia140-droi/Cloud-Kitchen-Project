@@ -1,0 +1,19 @@
+﻿@{
+    ViewData["Title"] = "Notifications";
+    Layout = "~/Views/Shared/_SellerLayout.cshtml";
+}
+
+<main class="main-content">
+    <div class="profile-box"><img src="images/profile.png" alt="Amna"><div class="meta"><div class="name">Amna Ramzan</div><div class="role">Seller • Amna's Kitchen</div></div><div style="margin-left:auto"><span class="badge" id="unreadCount">0</span></div></div>
+
+    <div class="card">
+        <div class="top-actions">
+            <button id="btnAll" class="btn">All</button>
+            <button id="btnUnread" class="btn btn-mark">Unread</button>
+            <input id="searchNote" class="input" placeholder="Search notifications..." style="min-width:220px;margin-left:auto">
+            <button id="btnClear" class="btn btn-del">Clear All</button>
+        </div>
+
+        <div class="list" id="notesList"></div>
+    </div>
+</main>

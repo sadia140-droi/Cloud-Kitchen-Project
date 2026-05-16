@@ -1,0 +1,40 @@
+﻿@{
+    ViewData["Title"] = "Seller Sign Up";
+    Layout = "~/Views/Shared/_SellCustLayout.cshtml";
+}
+
+<div class="page-wrapper">
+    <div class="signup-card">
+        <h2>Seller Sign Up</h2>
+        <p>Create an account to register your kitchen</p>
+
+        <form asp-action="SellerSignup" asp-controller="Account" method="post" id="signupForm">
+
+            <label>Full Name</label>
+            <input type="text" name="FullName" placeholder="Your full name" required />
+
+            <label>Email Address</label>
+            <input type="email" name="Email" placeholder="you@example.com" required />
+
+            <label>Phone Number</label>
+            <input type="tel" name="PhoneNumber" placeholder="03xx-xxxxxxx" required />
+
+            <label>Create Password</label>
+            <input type="password" name="Password" placeholder="Enter password" required />
+
+            <label>Confirm Password</label>
+            <input type="password" name="ConfirmPassword" placeholder="Re-enter password" required />
+
+            <p class="note">
+                After sign up you'll be asked to complete your Kitchen Profile.
+            </p>
+
+            <button type="submit">Sign Up</button>
+        </form>
+
+        <div class="login-link">
+            Already a seller?
+            <a asp-action="Login" asp-controller="Account">Login</a>
+        </div>
+    </div>
+</div>

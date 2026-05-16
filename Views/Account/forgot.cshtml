@@ -1,0 +1,22 @@
+﻿@{
+    ViewData["Title"] = "Forgot Password";
+    Layout = "~/Views/Shared/_AuthLayout.cshtml";
+}
+
+<div class="forgot-container">
+    <h2>Forgot Password?</h2>
+    <p>Enter your registered email address to reset your password.</p>
+
+    <form asp-action="Forgot" asp-controller="Account" method="post">
+        <input type="email" name="Email" placeholder="Enter your email" required />
+        <button type="submit">Send Reset Link</button>
+    </form>
+
+    <div class="back-links">
+        <a asp-action="Login" asp-controller="Account">Back to Login</a>
+    </div>
+
+    <a asp-action="Index" asp-controller="Home" class="back-home">
+        ← Back to Home
+    </a>
+</div>

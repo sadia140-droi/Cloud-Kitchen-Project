@@ -1,0 +1,81 @@
+﻿/* ===== Theme Colors ===== */
+:root {
+    --soft-orange: #FFB347;
+    --beige: #F5E6CA;
+    --dark-brown: #5D4037;
+    --white: #FFFFFF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+
+.forgot-container {
+    background: var(--white);
+    width: 380px;
+    padding: 40px 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+    .forgot-container h2 {
+        color: var(--dark-brown);
+        margin-bottom: 10px;
+    }
+
+    .forgot-container p {
+        color: #6b5f58;
+        font-size: 0.95rem;
+        margin-bottom: 25px;
+    }
+
+    .forgot-container input {
+        width: 100%;
+        padding: 12px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        font-size: 1rem;
+    }
+
+    .forgot-container button {
+        width: 100%;
+        background: var(--soft-orange);
+        color: var(--dark-brown);
+        font-weight: bold;
+        border: none;
+        border-radius: 8px;
+        padding: 12px;
+        cursor: pointer;
+    }
+
+        .forgot-container button:hover {
+            background: var(--beige);
+        }
+
+.back-links {
+    margin-top: 20px;
+}
+
+    .back-links a {
+        text-decoration: none;
+        color: var(--soft-orange);
+        font-weight: bold;
+    }
+
+.back-home {
+    margin-top: 15px;
+    display: inline-block;
+    text-decoration: none;
+    color: var(--dark-brown);
+    font-weight: bold;
+}
+
+    .back-home:hover {
+        color: var(--soft-orange);
+    }
