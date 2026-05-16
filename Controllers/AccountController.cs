@@ -5,7 +5,7 @@ namespace Cloud_Kitchen_web_App.Controllers
     public class AccountController : Controller
     {
         // LOGIN
-        [HttpGet]
+        [HttpGet]////////////////////////////////commit
         public IActionResult Login()
         {
             return View();
